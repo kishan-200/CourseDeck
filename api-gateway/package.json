@@ -1,0 +1,16 @@
+{
+    "name": "api-gateway",
+    "version": "1.0.0",
+    "description": "API Gateway to route requests to microservices",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.2",
+      "http-proxy-middleware": "^2.0.1",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.3"
+    }
+  }
+  
