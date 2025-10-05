@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "5009:5009"
+    env_file:
+      - ./auth-service/.env
+
+  course-service:
+    build: ./course-service
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./course-service/.env
+
+  user-course-service:
+    build: ./user-course-service
+    ports:
+      - "5002:5002"
+    env_file:
+      - ./user-course-service/.env
+
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "5003:5003"
+    depends_on:
+      - auth-service
+      - course-service
+      - user-course-service
+    env_file:
+      - ./api-gateway/.env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5004:5004"
+    depends_on:
+      - api-gateway
+    env_file:
+      - ./frontend/.env
