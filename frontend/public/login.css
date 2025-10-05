@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Jost', sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+}
+
+.main {
+  width: 450px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: 40px;
+}
+
+.eduglobe label {
+  color: #2575fc;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-top: 50px;
+  display: block;
+}
+
+.login {
+  background: #f4f6fa;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 50px auto;
+  width: 70%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.google-login {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.google-login:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.03);
+}
+
+.google-login img {
+  width: 200px;
+}

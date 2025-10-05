@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Deck | Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard_style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      height: 100vh;
+      background: #f5f8fc;
+      color: #2c3e50;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #2c3e50;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sidebar h2 {
+      color: #f1c40f;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      font-weight: 500;
+      display: block;
+      transition: color 0.2s ease;
+    }
+
+    .sidebar a:hover {
+      color: #f1c40f;
+    }
+
+    .logout-btn {
+      background-color: #f39c12;
+      border: none;
+      padding: 10px;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Main content */
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topbar {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topbar h1 {
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    .courses-section {
+      padding: 2rem;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    .courses-section h2 {
+      font-size: 1.5em;
+      margin-bottom: 1.5rem;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .course-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .course-card h3 {
+      margin: 10px 0;
+    }
+
+    .course-card button {
+      background-color: #2980b9;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .course-card button:hover {
+      background-color: #2471a3;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 30px;
+      max-width: 500px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .close {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Toast */
+    .toast {
+      visibility: hidden;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2ecc71;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      z-index: 1001;
+    }
+
+    .toast.show {
+      visibility: visible;
+      animation: fadeInOut 3s ease forwards;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      10%, 90% { opacity: 1; }
+    }
+  </style>
+ </head>
+ <body>
+   <header class="hero">
+     <nav class="navbar">
+       <div class="logo">Course Deck</div>
+       <ul class="nav-links" id="nav-items">
+         <li><a href="/dashboard">Home</a></li>
+         <li><a href="/cart">Cart</a></li>
+         <!-- <li><a href="/my-courses">My Courses</a></li> -->
+       </ul>
+       <ul class="nav-links">
+         <li><button id="logoutBtn" class="logout-btn">Logout</button></li> 
+       </ul>
+     </nav>
+     <div class="hero-content">
+       <h1>Fuel Your Passion. Master Your Craft.</h1>
+       <p>Take control of your growth journey.</p>
+       <a id="explore-courses" href="#courses" class="cta-button">Explore Courses</a>
+     </div>
+   </header>
+ 
+   <section id="courses" class="courses">
+     <h2>Courses Available</h2>
+     <div id="course-list" class="course-container"></div>
+   </section>
+ 
+   <!-- Modal -->
+   <div id="courseModal" class="modal">
+     <div class="modal-content">
+       <span class="close">&times;</span>
+       <h2 id="modal-title"></h2>
+       <p id="modal-description"></p>
+       <p id="modal-price" style="color: #f39c12;"></p>
+       <button id="modal-addBtn" class="addBtn">Add to Cart</button>
+     </div>
+   </div>
+ 
+   <!-- Toast -->
+   <div id="toast" class="toast">Course added to cart successfully!</div>
+ 
+   <script src="script.js"></script>
+ </body>
+ </html>
+ 

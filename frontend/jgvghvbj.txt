@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin - Add Course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f0f2f5, #dfe6e9);
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.05rem;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .logout-btn {
+      background-color: #f8d390;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      color: #333;
+      transition: background 0.3s ease;
+    }
+
+    .logout-btn:hover {
+      background-color: #f4c370;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background: linear-gradient(145deg, #ffffff, #e6e9f0);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      padding: 40px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-header {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #1e3c72;
+    }
+
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fff;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #2a5298;
+      box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 12px;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Course Deck</div>
+    <nav>
+        <!-- <a href="/dashboard">Home</a> -->
+      <a href="/dashboard">Home</a>
+      <a href="/cart">Cart</a>
+      <ul class="nav-links">
+        <li><button id="logoutBtn" class="logout-btn">Logout</button></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <div class="form-header">Admin Courses</div>
+      <form>
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" required />
+
+        <label for="price">Price ($):</label>
+        <input type="number" id="price" required />
+
+        <label for="desc">Course Description:</label>
+        <textarea id="desc" rows="4" required></textarea>
+
+        <button type="submit">Add Course</button>
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>
+-->

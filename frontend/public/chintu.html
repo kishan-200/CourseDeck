@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="chintu.css">
+</head>
+<body>
+    <body>
+<!--
+An HTML5 responsive experiment of Breaking Bad serie intro. 
+
+Made with
+https://ita-design-system.github.io/bricss/
+https://github.com/olivier3lanc/Scroll-Btween
+
+Credits: https://www.sonypictures.com/tv/breakingbad
+
+Fonts: AtticAntique, HeartBreakingBad, SFPro
+-->
+
+<!-- Background radial gradient -->
+<div class="pos-fixed bottom-0 left-0 | w-100 h-100 | bg-2"></div>
+<!-- Smoke / smug effect -->
+<div class="pos-fixed bottom-0 left-0 | w-100 h-100 | opa-7 bg-4 mbm-multiply"></div>
+<div class="pos-fixed bottom-0 left-0 | w-100 h-100 | opa-0 bg-4 mbm-overlay"
+     style="animation: smoke 5s linear 0s infinite forwards;"></div>
+<div class="pos-fixed bottom-0 left-0 | w-100 h-100 | opa-0 bg-4 mbm-overlay"
+     style="animation: smoke 5s linear 2.5s infinite forwards;"></div>
+
+<!-- Main title -->
+<header class="d-flex | pos-fixed top-50 left-50 t-tX-50 t-tY-50 z-3">
+    <h1 class="d-flex fd-column | m-0 | ff-400"
+        scroll-btween="header"
+        data-detector="final_text_detector"
+        data-transform="perspective(800px) translateZ(|0 to -400|px)">
+        <!-- (Br)eaking -->
+        <span class="d-flex ai-center | pos-relative">
+            <!-- Periodic table 1 container -->
+            <span class="d-flex | pos-relative | p-8 ar-1"
+                  p-7="xs"
+                  scroll-btween="table1"
+                  data-detector="table1_detector"
+                  data-transform="perspective(1400px) translateZ(|500 to -500|px)"
+                  data-opacity="|0:0 to 50:0.5 to 60:0.3 to 100:0|">
+            </span>
+            <!-- Permanent Br element -->
+            <span class="d-flex | pos-absolute top-0 left-0 z-1 | p-8 ar-1 | bg-1 outl-1"
+                  p-7="xs"
+                  scroll-btween="br"
+                  data-detector="table1_detector"
+                  data-opacity="|0:0 to 40:0 to 50:0.8 to 100:1|">
+                <span class="d-flex jc-space-between | pos-absolute top-0 left-0 | w-100 p-1">
+                    <code class="ff-400 fs-1">79.904</code>
+                    <code class="maxw-2ch | ff-400 fs-1 ta-right">+5 +3 +1 -1</code>
+                </span>
+                <span class="d-flex fd-column | pos-absolute bottom-0 left-0 | p-1 | fs-2">
+                    <span class="d-flex fd-column">
+                        <code class="ff-700">35</code>
+                        <code class="ff-400 fs-1">2-8-18-7</code>
+                    </span>
+                </span>
+                <span class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | mt-offset-1 | ff-700 fs-8 ta-center" fs-7="xs">Bu</span>
+            </span>
+            <!-- eaking text first line -->
+            <span class="pl-2 mt-offset-2 | ff-heart fs-10 lh-special-1 | c-0 bsize-cover bpos-center | __rust"
+                  scroll-btween="eaking"
+                  data-detector="final_text_detector"
+                  data-opacity="|0:0 to 20:1 to 100:1|"
+                  fs-9="xs">
+               y course
+            </span>
+        </span>
+
+        <!-- (Ba)d -->
+        <span class="d-flex ai-center | pos-relative | ml-special-1 mt-2px"
+              ml-special-2="xs">
+            <!-- Periodic table 2 container -->
+            <span class="d-flex | pos-relative | p-8 ar-1"
+                  p-7="xs"
+                  scroll-btween="table2"
+                  data-detector="table2_detector"
+                  data-transform="perspective(1400px) translateZ(|500 to -500|px)"
+                  data-opacity="|0:0 to 50:0.5 to 100:0|">
+            </span>
+            <!-- Permanent Ba element -->
+            <span class="d-flex | pos-absolute top-0 left-0 | p-8 ar-1 | bg-1 outl-1"
+                  p-7="xs"
+                  scroll-btween="ba"
+                  data-detector="table2_detector"
+                  data-opacity="|0:0 to 40:0 to 50:0.8 to 100:1|">
+                <span class="d-flex jc-space-between | pos-absolute top-0 left-0 | w-100 p-1">
+                    <code class="ff-400 fs-1">137.3277</code>
+                    <code class="maxw-2ch | ff-400 fs-1 ta-right">+2</code>
+                </span>
+                <span class="d-flex fd-column | pos-absolute bottom-0 left-0 | p-1 | fs-2">
+                    <span class="d-flex fd-column">
+                        <code class="ff-700">56</code>
+                        <code class="ff-400 fs-1">2-8-18-18-8-2</code>
+                    </span>
+                </span>
+                <span class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | mt-offset-1 | ff-700 fs-8 ta-center" fs-7="xs">On</span>
+            </span>
+            <!-- eaking text second line -->
+            <span class="pl-2 mt-offset-2 | ff-heart fs-10 lh-special-1 | c-0 bsize-cover bpos-center | __rust"
+                  fs-9="xs"
+                  scroll-btween="d"
+                  data-detector="final_text_detector"
+                  data-opacity="|0:0 to 20:1 to 100:1|">
+                line
+            </span>
+        </span>
+    </h1>
+</header>
+
+<!-- Formulaes -->
+<ul class="pos-fixed bottom-0 left-0 | w-100 h-100 p-0 m-0 | ls-none"
+    style="perspective: 800px;"
+    scroll-btween="formulaes"
+    data-detector="table1_detector"
+    data-opacity="|0:1 to 30:0 to 100:0|" d-none="xs">
+    <li class="pos-fixed | fs-8 ff-formulae | opa-0" style="top: 40%; left: 50%; animation: formulae1 15s linear 0s infinite forwards;">C<sub>5</sub> H<sub>10</sub> N</li>
+    <li class="pos-fixed | fs-6 ff-formulae | opa-0" style="top: 20%; left: 80%; animation: formulae2 10s linear 1s infinite forwards;">C<sub>5</sub> H<sub>10</sub> N</li>
+    <li class="pos-fixed | fs-5 ff-formulae | opa-0" style="top: 45%; left: 45%; animation: formulae2 12s linear 2s infinite forwards;">C<sub>5</sub> H<sub>10</sub> N</li>
+    <li class="pos-fixed | fs-8 ff-formulae | opa-0" style="top: 60%; left: 15%; animation: formulae1 9s linear 0s infinite forwards;">C<sub>5</sub></li>
+    <li class="pos-fixed | fs-7 ff-formulae | opa-0" style="top: 80%; left: 35%; animation: formulae1 12s linear 2s infinite forwards;">C<sub>5</sub></li>
+    <li class="pos-fixed | fs-10 ff-formulae | opa-0" style="top: 20%; left: 20%; animation: formulae1 15s linear 3s infinite forwards;">H<sub>10</sub></li>
+    <li class="pos-fixed | fs-10 ff-formulae | opa-0" style="top: 60%; left: 80%; animation: formulae2 10s linear 1s infinite forwards;">H<sub>10</sub></li>
+    <li class="pos-fixed | fs-9 ff-formulae | opa-0" style="top: 10%; left: 55%; animation: formulae1 7s linear 1s infinite forwards;">N</li>
+    <li class="pos-fixed | fs-8 ff-formulae | opa-0" style="top: 60%; left: 25%; animation: formulae2 10s linear 3s infinite forwards;">N</li>
+    <li class="pos-fixed | fs-7 ff-formulae | opa-0" style="top: 30%; left: 60%; animation: formulae2 8s linear 2s infinite forwards;">149.24</li>
+    <li class="pos-fixed | fs-6 ff-formulae | opa-0" style="top: 60%; left: 20%; animation: formulae1 5s linear 4s infinite forwards;">149.24</li>
+    <li class="pos-fixed | fs-5 ff-formulae | opa-0" style="top: 20%; left: 20%; animation: formulae1 5s linear 4s infinite forwards;">meth</li>
+    <li class="pos-fixed | fs-4 ff-formulae | opa-0" style="top: 60%; left: 50%; animation: formulae2 7s linear 2s infinite forwards;">meth</li>
+</ul>
+
+<!-- Start help -->
+<p class="d-flex fd-column ai-center jc-center | pos-fixed top-0 left-0 | w-100 h-100 m-0"
+   scroll-btween="sc"
+   data-detector="table1_detector"
+   data-opacity="|0:1 to 30:0 to 100:0|"
+   data-transform="perspective(800px) translateZ(-|0:0 to 30:700 to 100:700|px)">
+    <!-- First line -->
+    <span class="d-flex ai-center jc-center">
+        <!-- Permanent Sc element -->
+        <span class="d-flex | pos-relative | p-8 ar-1 | bg-1 outl-1"
+              p-7="xs">
+            <span class="d-flex jc-space-between | pos-absolute top-0 left-0 | w-100 p-1">
+                <code class="ff-400 fs-1">44.9559085</code>
+                <code class="maxw-2ch | ff-400 fs-1 ta-right">+3</code>
+            </span>
+            <span class="d-flex fd-column | pos-absolute bottom-0 left-0 | p-1 | fs-2">
+                <span class="d-flex fd-column">
+                    <code class="ff-700">21</code>
+                    <code class="ff-400 fs-1">2-8-9-2</code>
+                </span>
+            </span>
+            <span class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | mt-offset-1 | ff-700 fs-8 ta-center" fs-7="xs">cou</span>
+        </span>
+        <!-- Rest of text -->
+        <span class="pos-relative | pl-8 pr-8 mt-offset-2 | ff-heart fs-10 lh-0"
+              pl-7="xs"
+              pr-7="xs"
+              fs-8="xs">
+            <span class="pos-absolute top-50 left-0 t-tY-50 | pl-2 | lh-special-1 | c-0 bsize-cover bpos-center | __rust">rse</span>
+        </span>
+    </span>
+    <!-- Second line -->
+    <span class="d-flex ai-center jc-center">
+        <!-- Rest of text -->
+        <span class="pos-relative | pl-8 pr-8 | ff-heart fs-10 lh-0"
+              pl-7="xs"
+              pr-7="xs"
+              fs-8="xs">
+            <span class="pos-absolute top-50 right-0 t-tY-50 | pr-2 | lh-special-1 | c-0 bsize-cover bpos-center | __rust">de</span>
+        </span>
+        <!-- Permanent N element -->
+        <span class="d-flex | pos-relative | p-8 mt-2px ml-1 ar-1 | bg-1 outl-1"
+              p-7="xs">
+            <span class="d-flex jc-space-between | pos-absolute top-0 left-0 | w-100 p-1">
+                <code class="ff-400 fs-1">14.007</code>
+                <code class="maxw-2ch | ff-400 fs-1 ta-right">+4 +3 -3</code>
+            </span>
+            <span class="d-flex fd-column | pos-absolute bottom-0 left-0 | p-1 | fs-2">
+                <span class="d-flex fd-column">
+                    <code class="ff-700">7</code>
+                    <code class="ff-400 fs-1">2-5</code>
+                </span>
+            </span>
+            <span class="pos-absolute top-50 left-50 t-tY-50 t-tX-50 | mt-offset-1 | ff-700 fs-8 ta-center" fs-7="xs">ck</span>
+            
+        </span>
+    </span>
+</p>
+
+
+<!-- Menu -->
+<menu class="d-flex ai-center jc-space-between | pos-fixed bottom-0 left-0 z-3 | w-100 p-0 m-0 | ls-none">
+    <li id="audio_commands"></li>
+    <li class="d-flex | fs-2 p-5">
+        <a  href="index.html"
+           class="td-none"
+           target="_blank"
+           title="Open Breaking Bad’s Official Page on a new tab">
+            &copy;
+            Login<svg style="height: 1em" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+        </a>
+    </li>
+    <li class="pos-fixed top-0 right-0">
+        <button type="button"
+                class="p-5 | ff-700 fs-4 | c-neutral-100 bc-0 b-0 cur-pointer"
+                onclick="bb.toggleFullScreen(this)">
+            Enter Full<span class="c-secondary-100">Sc</span>reen
+        </button>
+    </li>
+</menu>
+
+<div style="padding-top: 100vh; padding-bottom: 30vh">
+    <div id="table1_detector"></div>
+</div>
+<div style="padding-top: 30vh; padding-bottom: 80vh">
+    <div id="table2_detector"></div>
+</div>
+<div style="padding-bottom: 30vh">
+    <div id="final_text_detector"></div>
+</div>
+
+      <script src="chintu.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cart</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background-color: #1f2937;
+      height: 100vh;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #facc15;
+      margin-bottom: 40px;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #facc15;
+    }
+
+    .logout-btn {
+      background-color: #f59e0b;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: auto;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 220px;
+      padding: 60px 40px;
+      flex: 1;
+      width: calc(100% - 220px);
+    }
+
+    .cart {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .cart h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    #cart-items {
+      margin-bottom: 30px;
+    }
+
+    #checkout-btn {
+      background-color: #3b82f6;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    #checkout-btn:hover {
+      background-color: #2563eb;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+      }
+
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .nav-links {
+        flex-direction: row;
+        gap: 15px;
+      }
+
+      .logout-btn {
+        margin-top: 0;
+        margin-left: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div>
+      <div class="logo">Course Deck</div>
+      <ul class="nav-links">
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="/cart">Cart</a></li>
+      </ul>
+    </div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </aside>
+
+  <!-- Main Cart Section -->
+  <div class="main-content">
+    <section class="cart">
+      <h2>Your Cart</h2>
+      <div id="cart-items">
+      </div>
+      <button id="checkout-btn">Proceed to Checkout</button>
+    </section>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+</html>
